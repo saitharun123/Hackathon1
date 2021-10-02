@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [DisplayBookshelves_Team3]">
+  <test name="Test(failed)">
+    <groups>
+      <run>
+        <include name="Smoke Test"/>
+        <exclude name="Regression Test"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.selenium.testbuild.testCases">
+        <methods>
+          <include name="validateHomePage"/>
+          <include name="popup"/>
+          <include name="validateBookshelvesPage"/>
+        </methods>
+      </class> <!-- com.selenium.testbuild.testCases -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [DisplayBookshelves_Team3] -->
