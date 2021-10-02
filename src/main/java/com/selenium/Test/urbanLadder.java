@@ -172,23 +172,13 @@ public class urbanLadder {
 		}
 	}
 	
-	 //To get title page of Giftcards page
-     public static void clickGiftcards() throws Exception {
-		
-		WebElement giftCard = driver.findElement(By.linkText("Gift Cards"));
-		giftCard.click();
-		
-		String pageTitle = driver.getTitle();
-		System.out.println("HomePage : "+pageTitle);
-		//Assert.assertEquals(pageTitle, "Gift Card - Buy Gift Cards & Vouchers Online for Wedding, Birthday | Urban Ladder");
-	}
+
      
     //To fill the giftcard and validate it	
 	public static void giftcards() throws Exception {
 		
-//		WebElement giftCard = driver.findElement(By.linkText("Gift Cards"));
-//		//highlighterMethod.highlight(driver, giftCard);
-//		giftCard.click();
+		WebElement giftCard = driver.findElement(By.linkText("Gift Cards"));
+		giftCard.click();
 		Thread.sleep(2000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,800)", "");

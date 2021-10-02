@@ -23,8 +23,6 @@ public class testCases {
 
 	@BeforeSuite
 	public void setup() {
-
-		//driver = browserSetup.DriverSetup();
 		driver = DriverSetup.getDriver();
 
 	}
@@ -34,29 +32,12 @@ public class testCases {
 		new urbanLadder(driver);
 		
 	}
+
 	
-	@Test (priority = 0, groups={"Smoke Test"})
-	public void aaavalidateHomePage(){
-		ExtentTest logger = report.createTest("Validating HomePage", "Test 1");
-		logger.log(Status.INFO, "Test for Homepage Validation");
-		new urbanLadder(driver);
-		//logger.info("This will close the popup window");
-		urbanLadder.homePage();
-		logger.pass("Passed");
-		
-	}
 	
-	@Test (priority = 2, groups={"Smoke Test"})
-	public void bbbvalidateBookshelvesPage() throws Exception{
-		ExtentTest logger = report.createTest("Validating Booksheleves Page", "Test 4");
-		logger.log(Status.INFO, "Test for Booksheleves Page Validation");
-		new urbanLadder(driver);
-		urbanLadder.bookshelvesPage();
-		logger.pass("Passed");
-	}
 	
 	//TestCase to close the popup window
-	@Test (priority = 1, groups={"Smoke Test"})
+	@Test (priority = 0)
 	public void popup() throws Exception {
 		ExtentTest logger = report.createTest("Closing Popup", "Test 2");
 		logger.log(Status.INFO, "Test for closing Popup");
@@ -67,7 +48,7 @@ public class testCases {
 	}
 	
 	//TestCase to Open the Booksheleves
-	@Test (priority = 3, groups={"Regression Test"})
+	@Test (priority = 1)
 	public void bookshelves() throws Exception {
 		ExtentTest logger = report.createTest("Open Bookshelves", "Test 3");
 		logger.log(Status.INFO, "Test for opening bookshelevs");
@@ -76,20 +57,9 @@ public class testCases {
 		urbanLadder.clickBookshelves();
 		logger.pass("Passed");
 	}
-	
-//	@Test (priority = 3, groups={"Smoke Test"})
-//	public void validateBookshelvesPage(){
-//		ExtentTest logger = report.createTest("Validating Booksheleves Page", "Test 4");
-//		logger.log(Status.INFO, "Test for Booksheleves Page Validation");
-//		new urbanLadder(driver);
-//		//logger.info("This will close the popup window");
-//		urbanLadder.bookshelvesPage();
-//		logger.pass("Passed");
-//	}
 		
-	
 	//TestCase to Select the storage type from dropdown
-	@Test (priority = 4, groups={"Regression Test"})
+	@Test (priority = 2)
 	public void storage() throws Exception {
 		ExtentTest logger = report.createTest("Select storage type", "Test 5");
 		logger.log(Status.INFO, "Test for selecting bookshelves");
@@ -100,7 +70,7 @@ public class testCases {
 	}
 	
 	//TestCase to select the price range
-	@Test (priority = 5, groups={"Regression Test"})
+	@Test (priority = 3)
 	public void slider() throws Exception {
 		ExtentTest logger = report.createTest("Adjust slider", "Test 6");
 		logger.log(Status.INFO, "Test for moving slider");
@@ -111,7 +81,7 @@ public class testCases {
 	}
 	
 	//TestCase to enable the check box for exclude out of box items
-	@Test (priority = 6, groups={"Regression Test"})
+	@Test (priority = 4)
 	public void checkbox() throws Exception {
 		ExtentTest logger = report.createTest("Exclude - Checbox", "Test 7");
 		logger.log(Status.INFO, "Test for enabling checkbox");
@@ -122,7 +92,7 @@ public class testCases {
 	}
 	
 	//TestCase to print the first three items
-	@Test (priority = 7, groups={"Regression Test"})
+	@Test (priority = 5)
 	public void printItems() throws Exception {
 		ExtentTest logger = report.createTest("Print first three items", "Test 8");
 		logger.log(Status.INFO, "Test for printing items");
@@ -133,7 +103,7 @@ public class testCases {
 	}
 	
 	//TestCase to print the collection items
-	@Test (priority = 8, groups={"Regression Test"})
+	@Test (priority = 6)
 	public void collections() throws Exception {
 		ExtentTest logger = report.createTest("Collections", "Test 9");
 		logger.log(Status.INFO, "Test for collections");
@@ -144,7 +114,7 @@ public class testCases {
 	}
 	
 	//TestCase to retrive submenu list
-	@Test (priority = 9, groups={"Regression Test"})
+	@Test (priority = 7)
 	public void printSubmenu() throws Exception {
 		ExtentTest logger = report.createTest("Sub menu - New Arrivals", "Test 10");
 		logger.log(Status.INFO, "Test for Retriving submenu list");
@@ -153,20 +123,8 @@ public class testCases {
 		urbanLadder.printOptions();
 		logger.pass("Passed");
 	}
-	
-	@Test (priority = 10, groups="Smoke Test")
-	//@Test(enabled=false)
-	public void validateGiftCardPage() throws Exception{
-		ExtentTest logger = report.createTest("Validating Giftcard Page", "Test 11");
-		logger.log(Status.INFO, "Test for Giftcard Page Validation");
-		new urbanLadder(driver);
-		//logger.info("This will close the popup window");
-		urbanLadder.clickGiftcards();
-		logger.pass("Passed");
-	}
-	
 		
-	@Test (priority = 11, groups="Regression Test")
+	@Test (priority = 8)
 	//@Test(enabled=false)
 	public void giftCard() throws Exception {
 		ExtentTest logger = report.createTest("Giftcards", "Test 12");
